@@ -27,6 +27,11 @@ class MyPortfolio {
      * the screen on one line.
      */	
 	static void printIntegerList(int[] values) {
+        Scanner intList = new Scanner (System.in);
+        System.out.print("Enter list of integers");
+        int ints = intList.next();
+        for(int i = 0; i < -1; i--);
+            System.out.print(ints[i]);
 
 	}
 
