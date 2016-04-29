@@ -30,7 +30,7 @@ class MyPortfolio {
         Scanner intList = new Scanner (System.in);
         System.out.print("Enter list of integers");
         int ints = intList.next();
-        for(int i = 0; i < -1; i--);
+        for(int i = 0; i > -1; i--);
             System.out.print(ints[i]);
 
 	}
