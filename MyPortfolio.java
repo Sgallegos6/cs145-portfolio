@@ -26,14 +26,12 @@ class MyPortfolio {
      * Accepts a list of integers as an argument and prints the integers to 
      * the screen on one line.
      */	
-	static void printIntegerList(int[] values) {
-        Scanner intList = new Scanner (System.in);
-        System.out.print("Enter list of integers");
-        int ints = intList.next();
-        for(int i = 0; i > -1; i--);
-            System.out.print(ints[i]);
-
+    static void printIntegerList(int[] values) {
+        int value=values.length;
+        for(int i = 0; i < value; i++){
+            System.out.print(values[i]);
 	}
+}
 
 
     /**
@@ -41,15 +39,20 @@ class MyPortfolio {
      * ORDER to the screen on one line.
      */	
 	static void printIntegerListReversed(int[] values) {
-
+        int sc = values.length-1;
+        for (int i = sc;i>=0;i--){
+            System.out.print(values[i]);
+        }   
 	}
 
     /**
-     * Accepts two characters, swaps the value of left_char and right_char
-     * and returns the "new" left_char.
+     * 
       */	
 	static char swapLeftWithRight(char left_char, char right_char) {
-		return ' ';
+        char temp = left_char;
+        left_char=right_char;
+        right_char = temp;;
+        return left_char;
 	}
 
     /**
@@ -58,7 +61,11 @@ class MyPortfolio {
      * containing the swapped version of the array passed in as the argument.
      */	
 	static int[] swapFirstWithLast(int[] values) {
-
+        int a = values[0];
+        int b = values[values.length-1];
+        int c = values[0];
+        values[0]=b;
+        values[values.length-1]=c;
 		return values;
 	}
 
@@ -67,9 +74,16 @@ class MyPortfolio {
      * found in the list.
      */	
 	static int min(int[] values) {
+        int min = values[0];
+        for(int i = 0;i<values.length;i++){
+            if (values[i]<min){
+                min = values[i];
+            }
 
-		return 0;
+        }
+            return min;
 	}
+
 
     /**
      * Accepts a list of integers as an argument and returns the largest value
