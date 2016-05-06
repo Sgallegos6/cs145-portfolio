@@ -90,8 +90,13 @@ class MyPortfolio {
      * found in the list.
      */	
 	static int max(int[] values) {
-
-		return 0;
+        int max = values[0];
+        for (int i =0;i<values.length;i++){
+            if (values[i]>max){
+                max = values[i];
+            }
+        }
+		return max;
 	}
 
     /**
@@ -99,8 +104,12 @@ class MyPortfolio {
      * values found in the list.
      */	
 	static int findAverage(int[] values) {
-
-		return 0;
+        int sum = 0;
+        for (int i = 0; i < values.length;i++){
+            sum = sum + values[i];
+        }
+        int average = (sum / values.length);
+		  return average;
 	}
 
     /**
@@ -108,15 +117,24 @@ class MyPortfolio {
      * the number of times the integer is found in the list.
      */	
 	static int frequencyCount(int[] values, int val) {
-
-		return 0;
+        int count = 0;
+        for (int i = 0; i<values.length;i++){
+            if(val == values[i]){
+                count++;
+            }
+        }
+		return count;
 	}
 
     /**
      * Accepts a String argument and returns the argument in reverse order.
      */	
 	static String reverseString(String chars) {
-
-		return "\nNot implemented yet!";
+        String j = "";
+        int p = chars.length() -1;
+        for (int i = p; i >=0;i--){
+            j = j + chars.charAt(i);
+        }
+		return j;
 	}
 }
